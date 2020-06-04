@@ -7,6 +7,7 @@ Protecting web-developer from scammers
 * Destroy site,
 * Delete file(script)
 ## Using:
+ Download archive with project<br>
  Rename file for cloaking in CMS,<br>
  Paste into the site,<br>
  Use script in folder python for use this script
