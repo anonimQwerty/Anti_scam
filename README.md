@@ -7,5 +7,5 @@ Protecting web-developer from scammers
 * Destroy site,
 * Delete file(script)
 ## Using:
- Rename file for mask in CMS,\n
+ Rename file for mask in CMS,<br>
  Use this file from console(folder python)
