@@ -8,4 +8,5 @@ Protecting web-developer from scammers
 * Delete file(script)
 ## Using:
  Rename file for cloaking in CMS,<br>
- Use this file from console(folder python)
+ Paste into the site,<br>
+ Use script in folder python for use this script
