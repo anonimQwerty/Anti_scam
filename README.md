@@ -11,3 +11,5 @@ Protecting web-developer from scammers
  Rename file for cloaking in CMS,<br>
  Paste into the site,<br>
  Use script in folder python for use this script
+ # Warning!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ ## If you use joomla CMS upload file in root(Site domain)/libraries or edit php script 
